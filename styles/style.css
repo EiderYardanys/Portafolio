@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --color-primario:#4E31AA;
+    --color-secundario:#3795BD;
+    --color-terciario: #22D4FD;
+    
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-Krona: "Krona one", sans-serif;
+}
+
+*{ /*Con el asterisco se hace un cambio universal o general. Se suele 
+    cambiar o poner los valores a cero de padding y margin cuando esta 
+    desorganizada la pagina por los valores predeterminados del navegador*/
+
+    padding: 0;
+    margin: 0;
+
+}
+
+/*p {
+    margin: 10px;
+    border: 2px solid black;
+    padding: 5px;
+ }*/
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    /*height: 100vh; */ /*Para darle todo el tamaño a la pagina y vh significa 
+    v= viewport que lo encontramos en header y h=height altura*/
+    box-sizing: border-box;
+}
+
+.header{
+padding: 2% 0% 0% 15% ;
+}
+
+.header_menu{
+display: flex;
+gap: 80px;
+}
+
+.header_menu_link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+.presentacion{
+
+    display: flex;
+    align-items: center;
+    padding:  6% 10%;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion_contenido{
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion_contenido_titulo{
+
+    font-size: 2.25rem;
+    font-family: var(--fuente-Krona);
+}
+
+.titulo_destacado { /*El punto sirve para traer la clase denominada en el html al css y dar el estilo*/
+
+    color: #A2CA71;
+    }
+
+.presentacion_contenido_texto{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+}
+
+.presentacion_enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion_enlaces_subtitulo{
+    font-family: var(--fuente-Krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion_enlaces_link{
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color:  #F6F6F6;
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.presentacion_enlaces_link:hover{
+    background-color: #272727;
+}
+
+.presentacion_imagen{
+    width: 50%;
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 1.5rem;
+    color: #000000;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px){
+
+.header {
+    padding: 10%;
+}
+
+.header_menu{
+    justify-content: center;
+}
+
+.presentacion{
+    flex-direction: column-reverse;
+    padding: 5%;
+}
+
+.presentacion_contenido{
+    width: auto;
+}
+}
